@@ -83,6 +83,8 @@ const cardGen = function (arrayElement) {
             <button
               type="button"
               class="btn btn-sm btn-outline-secondary"
+              data-bs-toggle="modal"
+              data-bs-target="#modal-${arrayElement.id}"
             >
               View
             </button>
@@ -95,6 +97,26 @@ const cardGen = function (arrayElement) {
             </button>
           </div>
           <small class="text-muted">ID: ${arrayElement.id}</small>
+        </div>
+      </div>
+      <div class="modal fade" id="modal-${arrayElement.id}" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">${arrayElement.alt}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img
+                class="w-100"
+                src="${arrayElement.src.original}"
+                alt="${arrayElement.id}"
+              />
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
