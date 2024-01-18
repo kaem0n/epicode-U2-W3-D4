@@ -7,7 +7,6 @@ const card = document.getElementsByClassName('card')[0]
 
 const apiUrl = 'https://api.pexels.com/v1/photos'
 const id = new URLSearchParams(location.search).get('id')
-let imageObj
 
 // Functions
 
