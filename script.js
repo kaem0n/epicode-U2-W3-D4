@@ -107,11 +107,13 @@ const cardGen = function (arrayElement) {
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <img
-                class="w-100"
-                src="${arrayElement.src.original}"
-                alt="${arrayElement.id}"
-              />
+              <a href="${arrayElement.url}">
+                <img
+                  class="w-100"
+                  src="${arrayElement.src.original}"
+                  alt="${arrayElement.id}"
+                />
+              </a>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

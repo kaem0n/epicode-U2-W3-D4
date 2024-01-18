@@ -27,7 +27,9 @@ const pageLoad = function () {
     .then((obj) => {
       console.log(obj)
       card.innerHTML = `
-        <img src="${obj.src.original}" class="card-img-top" alt="${obj.id}" />
+        <a href="${obj.url}">
+          <img src="${obj.src.original}" class="card-img-top" alt="${obj.id}" />
+        </a>
         <div class="card-body">
           <h5 class="card-title">${obj.alt}</h5>
           <p class="card-text">
