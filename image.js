@@ -27,7 +27,16 @@ const pageLoad = function () {
     })
     .then((obj) => {
       imageObj = obj
-      console.log(obj)
+      card.innerHTML = `
+        <img src="${obj.src.original}" class="card-img-top" alt="${obj.id}" />
+        <div class="card-body">
+          <h5 class="card-title">${obj.alt}</h5>
+          <p class="card-text">
+            Photo taken by: <a href="${obj.photographer_url}">${obj.photographer}</a>
+          </p>
+          <a href="./index.html" class="btn btn-primary">Go back</a>
+        </div>
+      `
     })
     .catch((err) => {
       console.log(err)
