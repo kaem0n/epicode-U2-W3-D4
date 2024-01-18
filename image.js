@@ -1,6 +1,6 @@
 // DOM references
 
-const main = document.getElementsByTagName('main')[0]
+const body = document.getElementsByTagName('body')[0]
 const card = document.getElementsByClassName('card')[0]
 
 // Variables
@@ -26,7 +26,7 @@ const pageLoad = function () {
       }
     })
     .then((obj) => {
-      imageObj = obj
+      console.log(obj)
       card.innerHTML = `
         <img src="${obj.src.original}" class="card-img-top" alt="${obj.id}" />
         <div class="card-body">
@@ -37,6 +37,7 @@ const pageLoad = function () {
           <a href="./index.html" class="btn btn-primary">Go back</a>
         </div>
       `
+      body.style.backgroundColor = `${obj.avg_color}`
     })
     .catch((err) => {
       console.log(err)
